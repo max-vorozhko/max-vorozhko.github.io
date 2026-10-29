@@ -10,6 +10,8 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://max-vorozhko.github.io/">
 <meta name="theme-color" content="#fff4d6">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23ffd23f'/%3E%3Crect x='3' y='3' width='58' height='58' rx='13' fill='none' stroke='%231b1b1f' stroke-width='5'/%3E%3Ctext x='32' y='45' font-family='Arial Black,Arial,sans-serif' font-weight='900' font-size='34' text-anchor='middle' fill='%231b1b1f'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23ffd23f'/%3E%3Ctext x='32' y='46' font-family='Arial Black,Arial,sans-serif' font-weight='900' font-size='38' text-anchor='middle' fill='%231b1b1f'%3EM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
@@ -116,6 +118,19 @@ h2 mark{background:var(--blue);color:#fff;padding:0 .14em;border-radius:.14em}
 .links{display:flex;flex-wrap:wrap;gap:12px}
 .links .btn{padding:10px 20px;font-size:15px;box-shadow:3px 3px 0 var(--ink)}
 
+/* sets inside a case */
+.sets{display:grid;gap:14px}
+.set{border:2.5px solid var(--ink);border-radius:18px;padding:16px 18px;box-shadow:3px 3px 0 var(--ink)}
+.s-arcade{background:#fff0b3}
+.s-hub{background:#d9f5ea}
+.set-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.set-title{font-family:"Unbounded";font-weight:800;font-size:14px;letter-spacing:-.01em}
+.count{font-weight:800;font-size:12px;background:var(--ink);color:var(--bg);border-radius:99px;padding:2px 12px}
+.set p{font-size:14.5px;margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.chips span{font-size:13px;font-weight:700;background:var(--card);border:2px solid var(--ink);border-radius:99px;padding:2px 10px}
+.set .btn{padding:9px 18px;font-size:14.5px;box-shadow:3px 3px 0 var(--ink)}
+
 /* how */
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;counter-reset:s}
 .step{background:var(--card);border:2.5px solid var(--ink);border-radius:22px;padding:24px;box-shadow:5px 5px 0 var(--ink)}
@@ -187,11 +202,21 @@ footer span{opacity:.6}
           <h3>Музика — це гра. Навіть для тих, хто поки тільки клацає</h3>
           <dl>
             <div><dt>Задача</dt><dd>Втримати учнів між уроками й привести нових на пробне заняття.</dd></div>
-            <div><dt>Що зробили</dt><dd>Хаб із ритм-тренажером, нотною пригодою на 16 рівнів і квізом «Який інструмент твій?», плюс Arcade з 7 мініігор: вокал, фортепіано, барабани, гітара, кахон, сопілка й етноспів. Загальний рейтинг і кнопка запису на урок.</dd></div>
+            <div><dt>Що зробили</dt><dd>Два окремі проєкти з наборами ігор усередині: <b>11 ігор разом</b>.</dd></div>
           </dl>
-          <div class="links">
-            <a class="btn y" href="https://max-vorozhko.github.io/rankova-arcade/" target="_blank" rel="noopener">Грати в Arcade →</a>
-            <a class="btn" href="https://max-vorozhko.github.io/rankova_usefull/" target="_blank" rel="noopener">Хаб ігор</a>
+          <div class="sets">
+            <div class="set s-arcade">
+              <div class="set-head"><span class="set-title">Проєкт 1 · Rankova Arcade</span><span class="count">7 мініігор</span></div>
+              <p>Гри на слух, ритм і пальці зі спільним рейтингом: найкращі результати з усіх ігор складаються в рівень гравця. Наприкінці кнопка запису на пробний урок.</p>
+              <div class="chips"><span>🎤 Вокал</span><span>🎹 Фортепіано</span><span>🥁 Барабани</span><span>🎸 Гітара</span><span>📦 Кахон</span><span>🪈 Сопілка</span><span>🎶 Етноспів</span></div>
+              <a class="btn y" href="https://max-vorozhko.github.io/rankova-arcade/" target="_blank" rel="noopener">Грати в Arcade →</a>
+            </div>
+            <div class="set s-hub">
+              <div class="set-head"><span class="set-title">Проєкт 2 · Хаб ігор для учнів</span><span class="count">4 гри</span></div>
+              <p>Окремий сайт для тренування між уроками: ритм, ноти й сольфеджіо в ігровій формі.</p>
+              <div class="chips"><span>🥁 Драм Тренажер з таблицею лідерів</span><span>🎶 Повтори ритм</span><span>🎹 Нотна пригода, 16 рівнів</span><span>🧠 Квіз «Який інструмент твій?»</span></div>
+              <a class="btn" href="https://max-vorozhko.github.io/rankova_usefull/" target="_blank" rel="noopener">Відкрити хаб →</a>
+            </div>
           </div>
         </div>
       </article>
