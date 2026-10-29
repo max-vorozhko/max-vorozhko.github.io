@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Max Vorozhko — ігри, в які хочеться зіграти ще раз</title>
+<meta name="description" content="Роблю брендовані ігри для бізнесу: навчання, маркетинг, комʼюніті. Кейси: Rankova Studio, Carbonis, Titan Club Rivne.">
+<meta property="og:title" content="Max Vorozhko — ігри, в які хочеться зіграти ще раз">
+<meta property="og:description" content="Брендовані ігри для бізнесу. Клієнти граються, ви рахуєте ліди.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://max-vorozhko.github.io/">
+<meta name="theme-color" content="#fff4d6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fff4d6; --ink:#1b1b1f; --card:#ffffff;
+  --yellow:#ffd23f; --pink:#ff6b9d; --blue:#4d8bff; --green:#2ed39b; --orange:#ff8a2a;
+  --shadow:6px 6px 0 var(--ink);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Manrope",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.6;
+  background-image:radial-gradient(rgba(27,27,31,.12) 1.2px,transparent 1.2px);
+  background-size:22px 22px;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+h1,h2,h3,.display{font-family:"Unbounded","Manrope",sans-serif}
+
+/* nav */
+nav{position:sticky;top:12px;z-index:10;margin:12px auto 0;max-width:1000px;padding:0 20px}
+nav .bar{
+  display:flex;align-items:center;justify-content:space-between;
+  background:var(--card);border:2.5px solid var(--ink);border-radius:99px;padding:10px 12px 10px 22px;box-shadow:4px 4px 0 var(--ink);
+}
+.logo{font-family:"Unbounded";font-weight:800;font-size:15px}
+.logo i{font-style:normal;background:var(--yellow);padding:0 6px;border-radius:6px}
+nav ul{display:flex;gap:6px;list-style:none;font-weight:700;font-size:14px}
+nav ul a{padding:8px 14px;border-radius:99px}
+nav ul a:hover{background:var(--yellow)}
+@media(max-width:560px){nav ul li:not(:last-child){display:none}}
+
+/* buttons */
+.btn{
+  display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:99px;
+  font-weight:800;font-size:16px;border:2.5px solid var(--ink);box-shadow:4px 4px 0 var(--ink);
+  transition:transform .12s, box-shadow .12s;background:var(--card);
+}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
+.btn.y{background:var(--yellow)}
+.btn.p{background:var(--pink)}
+
+/* hero */
+.hero{padding:72px 0 56px;position:relative}
+.sticker{
+  display:inline-block;font-weight:800;font-size:14px;background:var(--green);
+  border:2.5px solid var(--ink);border-radius:99px;padding:6px 16px;transform:rotate(-3deg);margin-bottom:24px;
+  box-shadow:3px 3px 0 var(--ink);
+}
+h1{font-size:clamp(34px,7vw,74px);line-height:1.04;font-weight:800;letter-spacing:-.03em;max-width:880px}
+h1 mark{background:var(--yellow);padding:0 .12em;border-radius:.14em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+h1 .sq{display:inline-block;background:var(--pink);color:#fff;padding:0 .14em;border-radius:.14em;transform:rotate(-2deg)}
+.lead{margin-top:26px;max-width:620px;font-size:clamp(17px,2.2vw,20px);font-weight:600}
+.lead small{display:block;margin-top:8px;font-weight:400;opacity:.65;font-size:15px}
+.cta{margin-top:34px;display:flex;flex-wrap:wrap;gap:14px}
+.float{position:absolute;font-size:56px;animation:bob 3.4s ease-in-out infinite;user-select:none}
+.f1{right:6%;top:70px}.f2{right:18%;top:230px;animation-delay:.8s;font-size:44px}.f3{right:2%;top:330px;animation-delay:1.6s;font-size:48px}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-14px) rotate(6deg)}}
+@media(max-width:820px){.float{display:none}}
+@media(prefers-reduced-motion:reduce){.float{animation:none}}
+
+/* marquee */
+.marquee{border-block:2.5px solid var(--ink);background:var(--ink);color:var(--bg);overflow:hidden;white-space:nowrap;transform:rotate(-1.2deg);margin:20px -20px 10px}
+.marquee div{display:inline-block;padding:12px 0;font-family:"Unbounded";font-size:15px;font-weight:500;animation:slide 26s linear infinite}
+@keyframes slide{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.marquee div{animation:none}}
+
+/* sections */
+section{padding:60px 0}
+h2{font-size:clamp(28px,5vw,46px);letter-spacing:-.02em;line-height:1.1;margin-bottom:12px}
+h2 mark{background:var(--blue);color:#fff;padding:0 .14em;border-radius:.14em}
+.sub{max-width:620px;margin-bottom:38px;font-weight:600}
+
+/* cases */
+.cases{display:grid;gap:34px}
+.case{
+  display:grid;grid-template-columns:1fr 1.1fr;background:var(--card);
+  border:2.5px solid var(--ink);border-radius:28px;box-shadow:var(--shadow);overflow:hidden;
+  transition:transform .15s;
+}
+.case:nth-child(odd){transform:rotate(-.5deg)}
+.case:nth-child(even){transform:rotate(.5deg)}
+.case:hover{transform:rotate(0) translateY(-3px)}
+@media(max-width:760px){.case,.case:nth-child(n){grid-template-columns:1fr;transform:none}}
+.visual{
+  min-height:270px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:30px;text-align:center;
+  border-right:2.5px solid var(--ink);
+}
+@media(max-width:760px){.visual{border-right:0;border-bottom:2.5px solid var(--ink)}}
+.visual .big{font-size:76px;line-height:1;filter:drop-shadow(4px 4px 0 rgba(27,27,31,.25))}
+.visual .name{font-family:"Unbounded";font-weight:800;font-size:21px;letter-spacing:-.01em}
+.visual .niche{font-size:13px;font-weight:800;background:var(--card);border:2px solid var(--ink);border-radius:99px;padding:3px 14px;margin-top:4px}
+.v1{background:var(--yellow)}.v2{background:var(--orange)}.v3{background:var(--blue);color:#fff}.v3 .niche{color:var(--ink)}
+.body{padding:30px}
+.meta{font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.badge{font-size:12px;background:var(--pink);color:#fff;border:2px solid var(--ink);border-radius:99px;padding:1px 10px;text-transform:none;letter-spacing:0;transform:rotate(-3deg)}
+.body h3{font-size:23px;line-height:1.2;letter-spacing:-.02em;margin-bottom:14px}
+.body dl{display:grid;gap:12px;margin-bottom:22px}
+.body dt{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;opacity:.55}
+.body dd{font-size:15.5px}
+.links{display:flex;flex-wrap:wrap;gap:12px}
+.links .btn{padding:10px 20px;font-size:15px;box-shadow:3px 3px 0 var(--ink)}
+
+/* how */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;counter-reset:s}
+.step{background:var(--card);border:2.5px solid var(--ink);border-radius:22px;padding:24px;box-shadow:5px 5px 0 var(--ink)}
+.step:nth-child(1){background:#ffe7a1}.step:nth-child(2){background:#ffc9dc}.step:nth-child(3){background:#cfe0ff}.step:nth-child(4){background:#bff2df}
+.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--ink);color:var(--bg);font-family:"Unbounded";font-weight:800;margin-bottom:12px}
+.step h4{font-family:"Unbounded";font-size:17px;margin-bottom:6px;letter-spacing:-.01em}
+.step p{font-size:15px;font-weight:600}
+
+/* contact */
+.contact{
+  text-align:center;background:var(--pink);border:2.5px solid var(--ink);border-radius:32px;box-shadow:8px 8px 0 var(--ink);
+  padding:60px 24px;margin:20px 0 70px;
+}
+.contact p{max-width:520px;margin:12px auto 30px;font-weight:700}
+.contact .cta{justify-content:center;margin-top:0}
+
+footer{padding:10px 0 44px;text-align:center;font-weight:700;font-size:14px}
+footer span{opacity:.6}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="bar">
+    <a href="#" class="logo">MAX <i>VOROZHKO</i></a>
+    <ul>
+      <li><a href="#cases">Кейси</a></li>
+      <li><a href="#how">Як працюю</a></li>
+      <li><a href="#contact">Контакти</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="sticker">Ігри · AI · Бізнес</span>
+    <h1>Роблю <mark>ігри</mark> для бізнесу, у які <span class="sq">граються</span> замість скролінгу</h1>
+    <p class="lead">Навчання, маркетинг, комʼюніті: з вашим брендом, рейтингом і кнопкою «записатися». Клієнти б'ють рекорди, ви рахуєте ліди.
+      <small>Так, це серйозний бізнес. Просто з монетками.</small></p>
+    <div class="cta">
+      <a class="btn y" href="#cases">Погратись у кейси ↓</a>
+      <a class="btn" href="#contact">Замовити гру</a>
+    </div>
+    <span class="float f1" aria-hidden="true">🕹️</span>
+    <span class="float f2" aria-hidden="true">⭐</span>
+    <span class="float f3" aria-hidden="true">🪙</span>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true"><div>
+  ★ БРЕНДОВАНІ ІГРИ ★ РЕЙТИНГИ ★ МОБІЛЬНА ВЕРСІЯ ★ ЛІДИ ЗАМІСТЬ ЗІТХАНЬ ★ БРЕНДОВАНІ ІГРИ ★ РЕЙТИНГИ ★ МОБІЛЬНА ВЕРСІЯ ★ ЛІДИ ЗАМІСТЬ ЗІТХАНЬ ★ БРЕНДОВАНІ ІГРИ ★ РЕЙТИНГИ ★ МОБІЛЬНА ВЕРСІЯ ★ ЛІДИ ЗАМІСТЬ ЗІТХАНЬ ★ БРЕНДОВАНІ ІГРИ ★ РЕЙТИНГИ ★ МОБІЛЬНА ВЕРСІЯ ★ ЛІДИ ЗАМІСТЬ ЗІТХАНЬ
+</div></div>
+
+<section id="cases">
+  <div class="wrap">
+    <h2>Три ніші. <mark>Один</mark> підхід</h2>
+    <p class="sub">Музика, вугілля й біг: різні світи, але гра скрізь працює як канал із клієнтом. Усе відкривається й грається просто зараз.</p>
+
+    <div class="cases">
+
+      <article class="case">
+        <div class="visual v1">
+          <div class="big">🥁</div>
+          <div class="name">RANKOVA ARCADE</div>
+          <div class="niche">Музична студія · освіта</div>
+        </div>
+        <div class="body">
+          <div class="meta">Rankova Studio · Рівне</div>
+          <h3>Музика — це гра. Навіть для тих, хто поки тільки клацає</h3>
+          <dl>
+            <div><dt>Задача</dt><dd>Втримати учнів між уроками й привести нових на пробне заняття.</dd></div>
+            <div><dt>Що зробили</dt><dd>Хаб із ритм-тренажером, нотною пригодою на 16 рівнів і квізом «Який інструмент твій?», плюс Arcade з 7 мініігор: вокал, фортепіано, барабани, гітара, кахон, сопілка й етноспів. Загальний рейтинг і кнопка запису на урок.</dd></div>
+          </dl>
+          <div class="links">
+            <a class="btn y" href="https://max-vorozhko.github.io/rankova-arcade/" target="_blank" rel="noopener">Грати в Arcade →</a>
+            <a class="btn" href="https://max-vorozhko.github.io/rankova_usefull/" target="_blank" rel="noopener">Хаб ігор</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="visual v2">
+          <div class="big">🔥</div>
+          <div class="name">ПРИГОДИ ВУГЛИНКИ</div>
+          <div class="niche">Виробництво · B2B-імідж</div>
+        </div>
+        <div class="body">
+          <div class="meta">Carbonis charcoal group</div>
+          <h3>Так, навіть деревне вугілля можна зробити веселим</h3>
+          <dl>
+            <div><dt>Задача</dt><dd>Показати виробника живо й запамʼятовувано для партнерів і клієнтів.</dd></div>
+            <div><dt>Що зробили</dt><dd>Гра на 9 рівнів: Вуглинка стрибає в мішок на лінії фасування, складає палети у фуру за реальною схемою й розпалює гриль. Зірки за точність і рейтинг.</dd></div>
+          </dl>
+          <div class="links">
+            <a class="btn y" href="https://max-vorozhko.github.io/Carbonis/game/" target="_blank" rel="noopener">Розпалити →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="visual v3">
+          <div class="big">🏃</div>
+          <div class="name">TITAN RUN</div>
+          <div class="niche">Спорт · комʼюніті</div>
+        </div>
+        <div class="body">
+          <div class="meta">Titan Club Rivne <span class="badge">ще бігає по гаражах</span></div>
+          <h3>Марафон для тих, хто ще не вибрався з дивану</h3>
+          <dl>
+            <div><dt>Задача</dt><dd>Обʼєднати комʼюніті навколо недільних пробіжок і мотивувати приходити.</dd></div>
+            <div><dt>Що зробили</dt><dd>Раннер вулицями Рівного до марафону: вода, гелі, титан-монети, рекорд у кілометрах і кнопка «поділитись». Далі: відмітки на пробіжках і подарунки від клубу.</dd></div>
+          </dl>
+          <div class="links">
+            <a class="btn y" href="https://max-vorozhko.github.io/Titan-Club-Rivne/" target="_blank" rel="noopener">Бігти →</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <h2>Як це <mark>працює</mark></h2>
+    <p class="sub">Від ідеї до гри, яка живе у вашому Instagram, на QR-коді чи на візитці.</p>
+    <div class="steps">
+      <div class="step"><h4>Ідея й механіка</h4><p>Вирішуємо, що гравець має зробити, дізнатись чи відчути про ваш бізнес.</p></div>
+      <div class="step"><h4>Брендинг</h4><p>Логотип, кольори, шрифти й голос компанії всередині гри. Без «ну типу схоже».</p></div>
+      <div class="step"><h4>Розробка з AI</h4><p>Швидкий прототип, правки за вашим фідбеком, мобільна версія з першого дня.</p></div>
+      <div class="step"><h4>Рейтинг і заклик</h4><p>Таблиця лідерів повертає людей, а кнопка запису чи замовлення перетворює гру на ліди.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <h2>Зробимо гру для вашого бізнесу?</h2>
+      <p>Напишіть коротко про свою нішу та задачу. Запропоную формат і наступні кроки. Обіцяю не питати «а чи не можна просто банер».</p>
+      <div class="cta">
+        <a class="btn y" href="https://www.linkedin.com/in/max-vorozhko/" target="_blank" rel="noopener">Написати в LinkedIn</a>
+        <a class="btn" href="https://www.instagram.com/max_vorozhko/" target="_blank" rel="noopener">Instagram @max_vorozhko</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© <span id="y">2026</span> Max Vorozhko · Рівне <span>· Game over? Ні, натисніть «Грати» ще раз.</span></div>
+</footer>
+
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
