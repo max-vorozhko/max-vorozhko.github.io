@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Max Vorozhko — ігри й застосунки для бізнесу</title>
+<meta name="description" content="Роблю брендовані ігри й застосунки для бізнесу: навчання, маркетинг, комʼюніті. Кейси: Rankova Studio, Titan Club Rivne, My Baby.">
+<meta property="og:title" content="Max Vorozhko — ігри, в які хочеться зіграти ще раз">
+<meta property="og:description" content="Брендовані ігри для бізнесу. Клієнти граються, ви рахуєте ліди.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://max-vorozhko.github.io/ig/">
+<meta name="theme-color" content="#fff4d6">
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../icon-192.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fff4d6; --ink:#1b1b1f; --card:#ffffff;
+  --yellow:#ffd23f; --pink:#ff6b9d; --blue:#4d8bff; --green:#2ed39b; --orange:#ff8a2a;
+  --shadow:6px 6px 0 var(--ink);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Manrope",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.6;font-size:17px;font-weight:500;
+  background-image:radial-gradient(rgba(27,27,31,.12) 1.2px,transparent 1.2px);
+  background-size:22px 22px;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+h1,h2,h3,h4{font-weight:800;letter-spacing:-.02em}
+
+/* nav */
+nav{position:sticky;top:12px;z-index:10;margin:12px auto 0;max-width:1000px;padding:0 20px}
+nav .bar{
+  display:flex;align-items:center;justify-content:space-between;
+  background:var(--card);border:2.5px solid var(--ink);border-radius:99px;padding:10px 12px 10px 22px;box-shadow:4px 4px 0 var(--ink);
+}
+.logo{font-weight:800;font-size:17px;letter-spacing:.01em}
+.logo i{font-style:normal;background:var(--yellow);padding:0 6px;border-radius:6px}
+nav ul{display:flex;gap:6px;list-style:none;font-weight:700;font-size:15px}
+nav ul a{padding:8px 14px;border-radius:99px}
+nav ul a:hover{background:var(--yellow)}
+@media(max-width:560px){nav ul li:not(:last-child){display:none}}
+
+/* buttons */
+.btn{
+  display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:99px;
+  font-weight:800;font-size:16px;border:2.5px solid var(--ink);box-shadow:4px 4px 0 var(--ink);
+  transition:transform .12s, box-shadow .12s;background:var(--card);
+}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
+.btn.y{background:var(--yellow)}
+.btn.p{background:var(--pink)}
+
+/* hero */
+.hero{padding:72px 0 56px;position:relative}
+.sticker{
+  display:inline-block;font-weight:800;font-size:14px;background:var(--green);
+  border:2.5px solid var(--ink);border-radius:99px;padding:6px 16px;transform:rotate(-3deg);margin-bottom:24px;
+  box-shadow:3px 3px 0 var(--ink);
+}
+h1{font-size:clamp(36px,7vw,76px);line-height:1.06;letter-spacing:-.035em;max-width:880px}
+h1 mark{background:var(--yellow);padding:0 .12em;border-radius:.14em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+h1 .sq{display:inline-block;background:var(--pink);color:#fff;padding:0 .14em;border-radius:.14em;transform:rotate(-2deg)}
+.lead{margin-top:26px;max-width:620px;font-size:clamp(18px,2.2vw,21px);font-weight:500}
+.lead small{display:block;margin-top:8px;opacity:.7;font-size:16px}
+.cta{margin-top:34px;display:flex;flex-wrap:wrap;gap:14px}
+.float{position:absolute;width:78px;height:78px;border-radius:20px;border:2.5px solid var(--ink);box-shadow:4px 4px 0 var(--ink);background:#fff;animation:bob 3.4s ease-in-out infinite;user-select:none}
+.f1{right:9%;top:56px}.f3{top:206px!important}.f4{top:356px!important;right:8%!important}.f2{right:2.5%;top:168px;animation-delay:.8s;width:66px;height:66px}.f3{right:9.5%;top:276px;animation-delay:1.6s;width:70px;height:70px}.f4{right:3%;top:388px;animation-delay:2.4s;width:62px;height:62px}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-14px) rotate(6deg)}}
+@media(max-width:1120px){.float{display:none}}
+@media(prefers-reduced-motion:reduce){.float{animation:none}}
+
+/* marquee */
+.marquee{border-block:2.5px solid var(--ink);background:var(--ink);color:var(--bg);overflow:hidden;white-space:nowrap;transform:rotate(-1.2deg);margin:20px -20px 10px}
+.marquee div{display:inline-block;padding:12px 0;font-size:16px;font-weight:800;letter-spacing:.04em;animation:slide 26s linear infinite}
+@keyframes slide{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.marquee div{animation:none}}
+
+/* sections */
+section{padding:60px 0}
+h2{font-size:clamp(30px,5vw,48px);letter-spacing:-.03em;line-height:1.1;margin-bottom:12px}
+h2 mark{background:var(--blue);color:#fff;padding:0 .14em;border-radius:.14em}
+.sub{max-width:640px;margin-bottom:38px}
+
+/* cases */
+.cases{display:grid;gap:34px}
+.case{
+  display:grid;grid-template-columns:1fr 1.1fr;background:var(--card);
+  border:2.5px solid var(--ink);border-radius:28px;box-shadow:var(--shadow);overflow:hidden;
+  transition:transform .15s;
+}
+.case:nth-child(odd){transform:rotate(-.5deg)}
+.case:nth-child(even){transform:rotate(.5deg)}
+.case:hover{transform:rotate(0) translateY(-3px)}
+@media(max-width:760px){.case,.case:nth-child(n){grid-template-columns:1fr;transform:none}}
+.visual{
+  min-height:270px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:30px;text-align:center;
+  border-right:2.5px solid var(--ink);
+}
+@media(max-width:760px){.visual{border-right:0;border-bottom:2.5px solid var(--ink)}}
+.visual .app{width:124px;height:124px;border-radius:28px;border:2.5px solid var(--ink);box-shadow:5px 5px 0 var(--ink);background:#fff;margin-bottom:10px}
+.visual .name{font-weight:800;font-size:23px;letter-spacing:.01em;line-height:1.2}
+.visual .niche{font-size:14px;font-weight:700;background:var(--card);border:2px solid var(--ink);border-radius:99px;padding:3px 14px;margin-top:4px}
+.v1{background:var(--yellow)}.v2{background:var(--orange)}.v3{background:var(--blue);color:#fff}.v3 .niche{color:var(--ink)}
+.body{padding:30px}
+.meta{font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.badge{font-size:12px;background:var(--pink);color:#fff;border:2px solid var(--ink);border-radius:99px;padding:1px 10px;text-transform:none;letter-spacing:0;transform:rotate(-3deg)}
+.body h3{font-size:25px;line-height:1.2;margin-bottom:14px}
+.body dl{display:grid;gap:12px;margin-bottom:22px}
+.body dt{font-size:12.5px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;opacity:.6}
+.body dd{font-size:16.5px}
+.links{display:flex;flex-wrap:wrap;gap:12px}
+.links .btn{padding:10px 20px;font-size:15px;box-shadow:3px 3px 0 var(--ink)}
+
+/* sets inside a case */
+.sets{display:grid;gap:14px}
+.set{border:2.5px solid var(--ink);border-radius:18px;padding:16px 18px;box-shadow:3px 3px 0 var(--ink)}
+.s-arcade{background:#fff0b3}
+.s-hub{background:#d9f5ea}
+.s-game{background:#dbe7ff}
+.s-admin{background:#ffe1ec}
+.s-promo{background:#fff0b3}
+.s-calc{background:#ffe3c7}
+.s-vug{background:#e6f4d7}
+.set p:last-child{margin-bottom:0}
+.body > .chips{margin-bottom:20px}
+.v4{background:#bff2df}
+.visual video{width:min(230px,72%);aspect-ratio:9/16;background:#000;border:2.5px solid var(--ink);border-radius:18px;box-shadow:4px 4px 0 var(--ink);margin-bottom:8px}
+.set-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.set-title{font-weight:800;font-size:17px;letter-spacing:-.01em}
+.count{font-weight:700;font-size:13px;background:var(--ink);color:var(--bg);border-radius:99px;padding:2px 12px}
+.set p{font-size:15.5px;margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.chips span{font-size:14px;font-weight:700;background:var(--card);border:2px solid var(--ink);border-radius:99px;padding:3px 12px}
+.set .btn{padding:9px 18px;font-size:15.5px;box-shadow:3px 3px 0 var(--ink)}
+
+/* how */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;counter-reset:s}
+.step{background:var(--card);border:2.5px solid var(--ink);border-radius:22px;padding:24px;box-shadow:5px 5px 0 var(--ink)}
+.step:nth-child(1){background:#ffe7a1}.step:nth-child(2){background:#ffc9dc}.step:nth-child(3){background:#cfe0ff}.step:nth-child(4){background:#bff2df}
+.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--ink);color:var(--bg);font-weight:800;margin-bottom:12px}
+.step h4{font-size:19px;margin-bottom:6px}
+.step p{font-size:16px}
+
+/* contact */
+.contact{
+  text-align:center;background:var(--pink);border:2.5px solid var(--ink);border-radius:32px;box-shadow:8px 8px 0 var(--ink);
+  padding:60px 24px;margin:20px 0 70px;
+}
+.contact p{max-width:520px;margin:12px auto 30px;font-weight:700;font-size:18px}
+.contact .cta{justify-content:center;margin-top:0}
+
+footer{padding:10px 0 44px;text-align:center;font-weight:700;font-size:15px}
+footer span{opacity:.6}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="bar">
+    <a href="#" class="logo">MAX <i>VOROZHKO</i></a>
+    <ul>
+      <li><a href="#cases">Кейси</a></li>
+      <li><a href="#how">Як працюю</a></li>
+      <li><a href="#contact">Контакти</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="sticker">Ігри · AI · Бізнес</span>
+    <h1>Роблю <mark>ігри</mark> для бізнесу, у які <span class="sq">граються</span> замість скролінгу</h1>
+    <p class="lead">Ігри й застосунки для навчання, маркетингу та комʼюніті: з вашим брендом, рейтингом і кнопкою «записатися». Клієнти б'ють рекорди, ви рахуєте ліди.
+      <small>Так, це серйозний бізнес. Просто з монетками.</small></p>
+    <div class="cta">
+      <a class="btn y" href="#cases">Погратись у кейси ↓</a>
+      <a class="btn" href="#contact">Замовити гру</a>
+    </div>
+    <img class="float f1" src="../icons/rankova.png" alt="" width="78" height="78">
+    <img class="float f3" src="../icons/titan.png" alt="" width="70" height="70">
+    <img class="float f4" src="../icons/mybaby.png" alt="" width="62" height="62">
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true"><div>
+  ★ БРЕНДОВАНІ ІГРИ ★ РЕЙТИНГИ ★ ЗАСТОСУНКИ ★ МОБІЛЬНА ВЕРСІЯ ★ ЛІДИ ЗАМІСТЬ ЗІТХАНЬ ★ БРЕНДОВАНІ ІГРИ ★ РЕЙТИНГИ ★ ЗАСТОСУНКИ ★ МОБІЛЬНА ВЕРСІЯ ★ ЛІДИ ЗАМІСТЬ ЗІТХАНЬ ★ БРЕНДОВАНІ ІГРИ ★ РЕЙТИНГИ ★ ЗАСТОСУНКИ ★ МОБІЛЬНА ВЕРСІЯ ★ ЛІДИ ЗАМІСТЬ ЗІТХАНЬ ★ БРЕНДОВАНІ ІГРИ ★ РЕЙТИНГИ ★ ЗАСТОСУНКИ ★ МОБІЛЬНА ВЕРСІЯ ★ ЛІДИ ЗАМІСТЬ ЗІТХАНЬ
+</div></div>
+
+<section id="cases">
+  <div class="wrap">
+    <h2>Три ніші. <mark>Один</mark> підхід</h2>
+    <p class="sub">Музика, біг і батьківство: різні світи, але зручний продукт у телефоні скрізь працює як канал із людьми. Усе відкривається просто зараз.</p>
+
+    <div class="cases">
+
+      <article class="case">
+        <div class="visual v1">
+          <img class="app" src="../icons/rankova.png" alt="Іконка Rankova Музичні Ігри" width="124" height="124">
+          <div class="name">RANKOVA<br>МУЗИЧНІ ІГРИ</div>
+          <div class="niche">Музична студія · освіта</div>
+        </div>
+        <div class="body">
+          <div class="meta">Rankova Studio · Рівне</div>
+          <h3>Музика — це гра. Навіть для тих, хто поки тільки клацає</h3>
+          <dl>
+            <div><dt>Задача</dt><dd>Втримати учнів між уроками й привести нових на пробне заняття.</dd></div>
+            <div><dt>Що зробили</dt><dd>Два окремі проєкти з наборами ігор усередині: <b>11 ігор разом</b>.</dd></div>
+          </dl>
+          <div class="sets">
+            <div class="set s-arcade">
+              <div class="set-head"><span class="set-title">Проєкт 1 · Rankova Музичні Ігри</span><span class="count">7 мініігор</span></div>
+              <p>Ігри на слух, ритм і пальці зі спільним рейтингом: найкращі результати з усіх ігор складаються в рівень гравця. Наприкінці кнопка запису на пробний урок.</p>
+              <div class="chips"><span>Вокал</span><span>Фортепіано</span><span>Барабани</span><span>Гітара</span><span>Кахон</span><span>Сопілка</span><span>Етноспів</span></div>
+              <a class="btn y" href="https://max-vorozhko.github.io/rankova-arcade/" target="_blank" rel="noopener">Грати в музичні ігри →</a>
+            </div>
+            <div class="set s-hub">
+              <div class="set-head"><span class="set-title">Проєкт 2 · Хаб ігор для учнів</span><span class="count">4 гри</span></div>
+              <p>Окремий сайт для тренування між уроками: ритм, ноти й сольфеджіо в ігровій формі.</p>
+              <div class="chips"><span>Драм Тренажер з таблицею лідерів</span><span>Повтори ритм</span><span>Нотна пригода, 16 рівнів</span><span>Квіз «Який інструмент твій?»</span></div>
+              <a class="btn" href="https://max-vorozhko.github.io/rankova_usefull/" target="_blank" rel="noopener">Відкрити хаб →</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="visual v3">
+          <video controls playsinline preload="none" poster="../media/titan-run-promo.jpg" aria-label="Промо-ролик Titan Run">
+            <source src="../media/titan-run-promo.mp4" type="video/mp4">
+          </video>
+          <div class="name">TITAN RUN</div>
+          <div class="niche">Спорт · комʼюніті</div>
+        </div>
+        <div class="body">
+          <div class="meta">Titan Club Rivne</div>
+          <h3>Почалося як гра. Доросло до застосунку цілого клубу</h3>
+          <dl>
+            <div><dt>Задача</dt><dd>Обʼєднати комʼюніті навколо недільних пробіжок і мотивувати приходити.</dd></div>
+            <div><dt>Що зробили</dt><dd>Три частини, що працюють разом: <b>гра-застосунок, адмінка клубу і промо</b>.</dd></div>
+          </dl>
+          <div class="sets">
+            <div class="set s-game">
+              <div class="set-head"><span class="set-title">1 · Гра і застосунок бігунів</span><span class="count">5 режимів</span></div>
+              <p>Раннер вулицями Рівного, який став клубним застосунком: рейтинги, профіль бігуна з ачівками й гардеробом, статистика недільних пробіжок і шлях до нагород. Ставиться на iPhone та Android.</p>
+              <div class="chips"><span>Біг</span><span>Неділя, 5 або 10 км</span><span>Трейл, 7 / 13 / 26 км</span><span>Малюнок дня</span><span>Клуб</span><span>Рейтинг</span><span>Профіль</span></div>
+              <a class="btn y" href="https://max-vorozhko.github.io/Titan-Club-Rivne/" target="_blank" rel="noopener">Бігти →</a>
+            </div>
+            <div class="set s-admin">
+              <div class="set-head"><span class="set-title">2 · Адмінка клубу</span><span class="count">закритий доступ</span></div>
+              <p>Окремий застосунок для організаторів із входом через Google і ролями. Те, що раніше жило в таблицях і месенджерах, тепер в одному місці.</p>
+              <div class="chips"><span>Відвідуваність неділь</span><span>Атлети</span><span>Входи учасників</span><span>Промокоди</span><span>Експорт у Google-таблицю</span></div>
+            </div>
+            <div class="set s-promo">
+              <div class="set-head"><span class="set-title">3 · Промо-матеріали</span><span class="count">3D-ролик</span></div>
+              <p>Вертикальний 3D-ролик для сторіс і Reels у стилі клубу: режими гри, профіль бігуна й заклик «Біжи з нами». Натисніть play на відео в цій картці.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="visual v4">
+          <img class="app" src="../icons/mybaby.png" alt="Іконка My Baby" width="124" height="124">
+          <div class="name">MY BABY</div>
+          <div class="niche">Батьківство · PWA-застосунок</div>
+        </div>
+        <div class="body">
+          <div class="meta">Власний продукт <span class="badge">не гра, але теж затягує</span></div>
+          <h3>Щоденник малюка для батьків, які сплять частинами</h3>
+          <dl>
+            <div><dt>Задача</dt><dd>Тримати сон, годування й прикорм малюка 6–12 місяців в одному місці, а не в трьох нотатках і в голові.</dd></div>
+            <div><dt>Що зробили</dt><dd>Застосунок українською, що ставиться на телефон і працює без інтернету. Сон записується в один дотик, а прогноз наступного сну рахується з власних патернів дитини за останні два тижні. Без медичних порад: лише записи й цифри.</dd></div>
+          </dl>
+          <div class="chips"><span>Сон і прогноз сну</span><span>Груди / пляшечка</span><span>Прикорм і алергени</span><span>Шкіра</span><span>Статистика</span><span>Нічна тема</span></div>
+          <div class="links">
+            <a class="btn y" href="https://max-vorozhko.github.io/My-baby/" target="_blank" rel="noopener">Відкрити My Baby →</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <h2>Як це <mark>працює</mark></h2>
+    <p class="sub">Від ідеї до гри, яка живе у вашому Instagram, на QR-коді чи на візитці.</p>
+    <div class="steps">
+      <div class="step"><h4>Ідея й механіка</h4><p>Вирішуємо, що гравець має зробити, дізнатись чи відчути про ваш бізнес.</p></div>
+      <div class="step"><h4>Брендинг</h4><p>Логотип, кольори, шрифти й голос компанії всередині гри. Без «ну типу схоже».</p></div>
+      <div class="step"><h4>Розробка з AI</h4><p>Швидкий прототип, правки за вашим фідбеком, мобільна версія з першого дня.</p></div>
+      <div class="step"><h4>Рейтинг і заклик</h4><p>Таблиця лідерів повертає людей, а кнопка запису чи замовлення перетворює гру на ліди.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <h2>Зробимо гру для вашого бізнесу?</h2>
+      <p>Напишіть коротко про свою нішу та задачу. Запропоную формат і наступні кроки. Обіцяю не питати «а чи не можна просто банер».</p>
+      <div class="cta">
+        <a class="btn y" href="https://www.linkedin.com/in/max-vorozhko/" target="_blank" rel="noopener">Написати в LinkedIn</a>
+        <a class="btn" href="https://www.instagram.com/max_vorozhko/" target="_blank" rel="noopener">Instagram @max_vorozhko</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© <span id="y">2026</span> Max Vorozhko · Рівне <span>· Game over? Ні, натисніть «Грати» ще раз.</span></div>
+</footer>
+
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
